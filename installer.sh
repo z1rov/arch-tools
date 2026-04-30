@@ -29,17 +29,25 @@ FAILED_BINS=()
 # ── Banner ────────────────────────────────────────────────────────────────────
 print_banner() {
     echo -e "${RED}${BOLD}"
-    echo -e "   ▀███████████▄   ▄█   ██████▄   ▄████████ ██╗   ██╗"
-    echo -e "     ██     ████  ███    ██   ▀█  ██    ▀██ ██║   ██║"
-    echo -e "     ██     ████  ███▌   ██       ██    ▄██ ██║   ██║"
-    echo -e "     ███████████  ███▌   ██       ████████▀ ╚██╗ ██╔╝"
-    echo -e "     ██    ████   ███▌   ██       ██   ▀██▄  ╚████╔╝ "
-    echo -e "     ██    ████   ███    ██   ▄█  ██    ███   ╚██╔╝  "
-    echo -e "   ▄████████████▀  █    ████████  ██████▀██    ██║   "
-    echo -e "                                               ╚═╝   ${RESET}"
-    echo -e "${GRAY}  ──────────────────────────────────────────────────────${RESET}"
-    echo -e "${BOLD}   z1rov   ·   zirov.xyz   ·   OSCP${RESET}"
-    echo -e "${GRAY}  ──────────────────────────────────────────────────────${RESET}"
+    echo -e "  ⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷"
+    echo -e "  ⡆⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑⢝⣇"
+    echo -e "  ⡆⣿⣿⣦⠹⣳⣳⣕⢅⠈⢗⢕⢕⢕⢕⢕⢈⢆⠟⠋⠉⠁⠉⠉⠁⠈⠼⢐⢕⢽"
+    echo -e "  ⡗⢰⣶⣶⣦⣝⢝⢕⢕⠅⡆⢕⢕⢕⢕⢕⣴⠏⣠⡶⠛⡉⡉⡛⢶⣦⡀⠐⣕⢕"
+    echo -e "  ⡝⡄⢻⢟⣿⣿⣷⣕⣕⣅⣿⣔⣕⣵⣵⣿⣿⢠⣿⢠⣮⡈⣌⠨⠅⠹⣷⡀⢱⢕"
+    echo -e "  ⡝⡵⠟⠈⢀⣀⣀⡀⠉⢿⣿⣿⣿⣿⣿⣿⣿⣼⣿⢈⡋⠴⢿⡟⣡⡇⣿⡇⡀⢕"
+    echo -e "  ⡝⠁⣠⣾⠟⡉⡉⡉⠻⣦⣻⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣦⣥⣿⡇⡿⣰⢗⢄"
+    echo -e "  ⠁⢰⣿⡏⣴⣌⠈⣌⠡⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣉⣉⣁⣄⢖⢕⢕⢕"
+    echo -e "  ⡀⢻⣿⡇⢙⠁⠴⢿⡟⣡⡆⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣵⣵⣿"
+    echo -e "  ⡻⣄⣻⣿⣌⠘⢿⣷⣥⣿⠇⣿⣿⣿⣿⣿⣿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    echo -e "  ⣷⢄⠻⣿⣟⠿⠦⠍⠉⣡⣾⣿⣿⣿⣿⣿⣿⢸⣿⣦⠙⣿⣿⣿⣿⣿⣿⣿⣿⠟"
+    echo -e "  ⡕⡑⣑⣈⣻⢗⢟⢞⢝⣻⣿⣿⣿⣿⣿⣿⣿⠸⣿⠿⠃⣿⣿⣿⣿⣿⣿⡿⠁⣠"
+    echo -e "  ⡝⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀⣈⠙"
+    echo -e "  ⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣"
+    echo -e "${RESET}"
+    echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}"
+    echo -e "  ${BOLD}Author: ${RESET} Zirov  ${CYAN}https://zirov.xyz${RESET}"
+    echo -e "  ${BOLD}OSCP${RESET}"
+    echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}"
     echo ""
 }
 
@@ -144,12 +152,17 @@ setup_custom_tools() {
     TMP_PIVOT="/tmp/pivoting-tools-clone"
     rm -rf "$TMP_PIVOT"
     if git clone -q https://github.com/z1rov/pivoting-tools "$TMP_PIVOT"; then
-        deploy_dir "$TMP_PIVOT/ligolo" "/usr/share/ligolo" "ligolo"
-        deploy_dir "$TMP_PIVOT/netcat" "/usr/share/nc"     "nc"
+        while IFS= read -r -d '' tool_dir; do
+            dname=$(basename "$tool_dir")
+            [[ "$dname" == .* ]] && continue
+            dst="/usr/share/$dname"
+            mkdir -p "$dst"
+            cp -r "$tool_dir/." "$dst/"
+            DEPLOYED_DIRS+=("$dst")
+        done < <(find "$TMP_PIVOT" -mindepth 1 -maxdepth 1 -type d -print0)
         rm -rf "$TMP_PIVOT"
         log ok "pivoting-tools deployed"
     else
-        FAILED_DIRS+=("ligolo" "nc")
         log warn "Failed to clone pivoting-tools"
     fi
 
@@ -157,26 +170,18 @@ setup_custom_tools() {
     TMP_AD="/tmp/active-directory-tools-clone"
     rm -rf "$TMP_AD"
     if git clone -q https://github.com/z1rov/active-directory-tools "$TMP_AD"; then
-        declare -A AD_MAP=(
-            ["mimikatz.exe"]="mimikatz"
-            ["Rubeus.exe"]="Rubeus"
-            ["SharpHound.exe"]="SharpHound"
-            ["SharpHound.ps1"]="SharpHound"
-            ["SharpGPOAbuse.exe"]="SharpGPOAbuse"
-            ["GMSAPasswordReader.exe"]="GMSAPasswordReader"
-            ["PowerView.ps1"]="PowerView"
-            ["PowerMad.ps1"]="PowerMad"
-            ["Invoke-Kerberoast.ps1"]="Invoke-Kerberoast"
-            ["Get-SPN.ps1"]="Get-SPN"
-        )
-        for file in "${!AD_MAP[@]}"; do
-            folder="/usr/share/${AD_MAP[$file]}"
-            deploy_dir "$TMP_AD/$file" "$folder" "${AD_MAP[$file]}"
-        done
+        # Dynamic: iterate every folder in the repo, copy as-is to /usr/share/
+        while IFS= read -r -d '' tool_dir; do
+            dname=$(basename "$tool_dir")
+            [[ "$dname" == .* ]] && continue
+            dst="/usr/share/$dname"
+            mkdir -p "$dst"
+            cp -r "$tool_dir/." "$dst/"
+            DEPLOYED_DIRS+=("$dst")
+        done < <(find "$TMP_AD" -mindepth 1 -maxdepth 1 -type d -print0)
         rm -rf "$TMP_AD"
         log ok "active-directory-tools deployed"
     else
-        FAILED_DIRS+=("mimikatz" "Rubeus" "SharpHound" "SharpGPOAbuse" "GMSAPasswordReader" "PowerView" "PowerMad" "Invoke-Kerberoast" "Get-SPN")
         log warn "Failed to clone active-directory-tools"
     fi
 }
@@ -288,18 +293,8 @@ setup_aliases() {
     grep -q "$MARKER" "$SHELL_RC" 2>/dev/null && \
         sed -i "/$MARKER/,/# ── end z1rov aliases ──/d" "$SHELL_RC"
 
-    declare -A ALIAS_MAP=(
-        ["/usr/share/ligolo"]="ligolo"
-        ["/usr/share/nc"]="nc-tools"
-        ["/usr/share/mimikatz"]="mimikatz"
-        ["/usr/share/Rubeus"]="rubeus"
-        ["/usr/share/SharpHound"]="sharphound"
-        ["/usr/share/SharpGPOAbuse"]="sharpgpo"
-        ["/usr/share/GMSAPasswordReader"]="gmsareader"
-        ["/usr/share/PowerView"]="powerview"
-        ["/usr/share/PowerMad"]="powermad"
-        ["/usr/share/Invoke-Kerberoast"]="kerberoast"
-        ["/usr/share/Get-SPN"]="getspn"
+    # Fixed aliases only for wordlists (everything else is dynamic)
+    declare -A FIXED_ALIASES=(
         ["/usr/share/wordlists"]="wordlists"
         ["/usr/share/seclists"]="seclists"
     )
@@ -307,13 +302,26 @@ setup_aliases() {
     {
         echo ""
         echo "# ── z1rov pentest aliases ──"
-        for dir in "${!ALIAS_MAP[@]}"; do
-            alias_name="${ALIAS_MAP[$dir]}"
+
+        # Fixed aliases (pivoting + wordlists)
+        for dir in "${!FIXED_ALIASES[@]}"; do
+            alias_name="${FIXED_ALIASES[$dir]}"
             if [[ -d "$dir" ]]; then
                 echo "alias ${alias_name}='cd ${dir} && ls'"
                 WRITTEN_ALIASES+=("${alias_name} → ${dir}")
             fi
         done
+
+        # Dynamic aliases: every deployed directory
+        for deployed in "${DEPLOYED_DIRS[@]}"; do
+            [[ "${FIXED_ALIASES[$deployed]+_}" ]] && continue
+            [[ ! -d "$deployed" ]] && continue
+
+            alias_name=$(basename "$deployed" | tr '[:upper:]' '[:lower:]' | tr '-' '_')
+            echo "alias ${alias_name}='cd ${deployed} && ls'"
+            WRITTEN_ALIASES+=("${alias_name} → ${deployed}")
+        done
+
         echo "# ── end z1rov aliases ──"
     } >> "$SHELL_RC"
 
@@ -390,9 +398,7 @@ print_summary() {
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 main() {
-    clear
     print_banner
-    sleep 1
     require_root
     detect_shell_rc
     update_system

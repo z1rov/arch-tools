@@ -1,4 +1,4 @@
-#!/bin/bash
+/#!/bin/bash
 # =============================================================================
 #  Author : z1rov  |  zirov.xyz  |  OSCP
 # =============================================================================
@@ -117,7 +117,7 @@ install_python() {
 
 # ── 3. Tools ──────────────────────────────────────────────────────────────────
 install_tools() {
-    TOOLS=(nmap hashcat ffuf feroxbuster git wget curl unzip)
+    TOOLS=(nmap hashcat ffuf feroxbuster git wget curl sqlmap whatweb netcat burpsuite john obsidian unzip)
     for tool in "${TOOLS[@]}"; do
         log info "Installing $tool..."
         if pacman -S --noconfirm "$tool" &>/dev/null; then
